@@ -9,14 +9,14 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    sh 'mvn clean install -DskipTests'
+                    bat 'mvn clean install -DskipTests'
                 }
             }
         }
         stage('Test') {
             steps {
                 script {
-                    sh 'mvn test'
+                    bat 'mvn test'
                 }
             }
         }
